@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CrateTrack.MainPage"
-             BackgroundColor="#38B2AC">
+             BackgroundColor="#38B2AC"
+             >
 
     <ContentPage.Content>
         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -24,7 +25,7 @@
                         </Label>
                     </StackLayout>
                 </Frame>
-                <Label Text="Made with ❤️ by Klaros" HorizontalOptions="Center" TextColor="White" Margin="0,20,0,0"/>
+               
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

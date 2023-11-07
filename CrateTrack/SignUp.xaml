@@ -13,7 +13,7 @@
             </Grid.ColumnDefinitions>
 
             <!-- Welcome Message Panel -->
-            <StackLayout Grid.Column="0" BackgroundColor="#68D391" Padding="30" WidthRequest="200">
+            <StackLayout Grid.Column="0" BackgroundColor="#4FD1C5" Padding="30" WidthRequest="250">
                 <Label Text="Welcome to"
                        FontSize="22"
                        TextColor="White"/>
@@ -64,7 +64,7 @@
                     <Label Text="Already have an account? Sign In"
                        HorizontalOptions="Center"
                        Margin="0,10,0,0"
-                       TextColor="#68D391">
+                       TextColor="#4FD1C5">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnSignInTapped"/>
                         </Label.GestureRecognizers>
