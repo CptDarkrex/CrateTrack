@@ -1,4 +1,6 @@
-﻿namespace CrateTrack;
+﻿using CrateTrack.Database;
+
+namespace CrateTrack;
 
 public partial class App : Application
 {

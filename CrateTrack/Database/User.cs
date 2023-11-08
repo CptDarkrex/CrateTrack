@@ -18,6 +18,7 @@ namespace CrateTrack.Database
 
         internal DbHelper _dbHelper;
 
+        public bool Authorised = false;
         public int UserId { get; set; }
         public string Email { get; set; }
         public string Username { get; set; }
@@ -37,6 +38,7 @@ namespace CrateTrack.Database
             this.PasswordHash = HashPassword(password);
         }
 
+        // this function is used to signing users up to the database
         public bool CreateUser()
         {
             using (var conn = _dbHelper.GetConnection())
