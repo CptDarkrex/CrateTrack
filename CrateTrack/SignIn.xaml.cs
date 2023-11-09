@@ -1,14 +1,15 @@
-namespace CrateTrack;
+﻿namespace CrateTrack;
 using CrateTrack.Database;
 using Npgsql;
+using System.Globalization;
 
 public partial class SignIn : ContentPage
 {
     private DbHelper _dbHelper;
-	public SignIn()
-	{
-		InitializeComponent();
-	}
+    public SignIn()
+    {
+        InitializeComponent();
+    }
     private User GetUserByUsername(string username)
     {
         using var conn = _dbHelper.GetConnection();
@@ -30,24 +31,35 @@ public partial class SignIn : ContentPage
         return null;
     }
 
+    public async Task ShowFlashMessage(string message, Color bg_color, int duration = 3000)
+    {
+        flashMessageLayout.BackgroundColor = bg_color;
+        flashWrapper.BackgroundColor = bg_color;
+
+        flashMessageLabel.Text = message;
+
+        flashMessageLayout.IsVisible = true;
+        flashWrapper.IsVisible = true;
+
+        await Task.Delay(duration);
+
+        flashWrapper.IsVisible = false;
+    }
+
 
     // Example event handler for a Login button click event
-    private void OnLoginButtonClicked(object sender, EventArgs e)
+    private async void OnLoginButtonClicked(object sender, EventArgs e)
     {
-        // Handle the login logic here
-        var user = GetUserByUsername(emailEntry.Text);
-        if (user != null && user.Authenticate(passwordEntry.Text, emailEntry.Text))
+        if (emailEntry.Text == "klaros")
         {
-            user.CreateSession();
-
-            // Store session token somewhere, perhaps in a static variable or properties.
-            // Then, you can use User.GetBySessionToken(token) to validate user sessions.
+            await ShowFlashMessage("Success", Colors.LightGreen, 3000);
         }
         else
         {
-            return;
+            await ShowFlashMessage("Failed", Colors.MediumVioletRed, 3000);
         }
     }
+
 
     // Example event han
     // dler for a Sign-up label tap event
@@ -64,6 +76,6 @@ public partial class SignIn : ContentPage
     private async void OnSignUpTapped(object sender, EventArgs e)
     {
         // Navigate to the Sign In page
-        await Navigation.PushAsync(new MainPage());
+        await Navigation.PushAsync(new SignUp());
     }
 }
