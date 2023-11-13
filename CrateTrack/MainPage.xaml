@@ -3,5 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CrateTrack.MainPage"
              BackgroundColor="#38B2AC"
+             MinimumWidthRequest="500"
              >
+
+    <HorizontalStackLayout Spacing="0">
+        <Frame x:Name="NavigatorLeftFrame" WidthRequest="250" BackgroundColor="#2D3748" CornerRadius="0" BorderColor="#2D3735">
+            <StackLayout>
+                <Button x:Name="DashboardBtn" BackgroundColor="#2D3748" BorderColor="Transparent" Text="Dashboard" FontSize="15" TextColor="WhiteSmoke"></Button>
+                <Button x:Name="Boxes" BackgroundColor="#2D3748" BorderColor="Transparent" Text="Boxes" FontSize="15" TextColor="WhiteSmoke"></Button>
+                <Button x:Name="Items" BackgroundColor="#2D3748" BorderColor="Transparent" Text="Items" FontSize="15" TextColor="WhiteSmoke"></Button>
+                <Button x:Name="YourHomes" BackgroundColor="#2D3748" BorderColor="Transparent" Text="Your Homes" FontSize="15" TextColor="WhiteSmoke"></Button>
+                <Button x:Name="Settings" BackgroundColor="#2D3748" BorderColor="Transparent" Text="Settings" FontSize="15" TextColor="WhiteSmoke"></Button>
+            </StackLayout>
+        </Frame>
+        <Frame x:Name="ContentWrapper" WidthRequest="750" BackgroundColor="#2D3748"  CornerRadius="0" BorderColor="#2D3759">
+            <StackLayout>
+                
+            </StackLayout>
+        </Frame>
+    </HorizontalStackLayout>
 </ContentPage>

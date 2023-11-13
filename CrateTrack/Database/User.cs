@@ -59,8 +59,6 @@ namespace CrateTrack.Database
             }
         }
 
-
-
         public bool Authenticate(string password, string username)
         {
             // Use BCrypt or similar here to check the password against the hash

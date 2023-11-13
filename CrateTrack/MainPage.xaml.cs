@@ -8,7 +8,7 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-		RedirectToSignIn();
+		/*RedirectToSignIn();*/
 	}
 
 	private User user = new User();

@@ -56,16 +56,8 @@ public partial class SignIn : ContentPage
         }
         else
         {
-            await ShowFlashMessage("Failed", Colors.MediumVioletRed, 3000);
+            await ShowFlashMessage("Failed", Colors.Red, 3000);
         }
-    }
-
-
-    // Example event han
-    // dler for a Sign-up label tap event
-    private void OnSignupLabelTapped(object sender, EventArgs e)
-    {
-        // Handle the sign-up navigation or logic here
     }
 
     // Example event handler for a Forgot Password label tap event
